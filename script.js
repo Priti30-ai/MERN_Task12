@@ -1,22 +1,22 @@
-// Values used for calculating compound interest
+// Input values
 let P = 100000;
 let r = 10;
 let n = 1;
 let t = 3;
 
-// Convert rate from percentage to decimal
+// Convert rate to decimal
 r = r / 100;
 
-// Calculate the total amount
+// Calculate amount
 let A = P * Math.pow((1 + r / n), n * t);
 
 // Calculate compound interest
 let compoundInterest = A - P;
+let result = compoundInterest.toFixed(2);
 
-// Display the result in console
-console.log("The compound interest after " + t + " years is ₹" + compoundInterest);
+// Show result in console
+console.log("Compound Interest after " + t + " years is ₹" + result);
 
-// Display the result on the webpage
-
+// Show result on webpage
 document.getElementById("result").innerHTML =
-    "Compound Interest = ₹" + compoundInterest.toFixed(2);
+    "Compound Interest = ₹" + result;
